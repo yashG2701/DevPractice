@@ -2,7 +2,7 @@
 
  services: 
   frontendimg:
-    build: /root/DevPractice/Fronend
+    build: /root/DevPractice/Frontend
     container_name : frontend
     ports: 
        - 80:80
