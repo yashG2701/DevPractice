@@ -7,7 +7,7 @@ services:
       - "8080:8080"
 
   frontendimg:
-    build: /root/DevPractice/Fronend 
+    build:  ./Fronend 
     ports:
       - "80:80"
     depends_on:
