@@ -1,7 +1,14 @@
 version: '3.8'
 services:
-  frontimg:
+  backendimg:
     build: .
     container_name: backend
     ports:
       - "8080:8080"
+
+  frontendimg:
+    build: ./Frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backendimg
