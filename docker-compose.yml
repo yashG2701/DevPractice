@@ -1,13 +1,13 @@
-version: '3'
+version: '2.25.0'
 services:
   backendimg:
-    build: .
+    build: /root/DevPractice/backend
     container_name: backend_container  
     ports:
       - "8080:8080"
 
   frontendimg:
-    build: /root/DevPractice/Fronend/  # Absolute path to the Dockerfile for frontend
+    build: /root/DevPractice/Fronend
     container_name: frontend_container  
     ports:
       - "80:80"
