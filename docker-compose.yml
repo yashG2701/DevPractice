@@ -1,15 +1,21 @@
-version: '2.25.0'
-services:
-  backendimg:
-    build: /root/DevPractice/backend
-    container_name: backend_container  
-    ports:
-      - "8080:8080"
+ version:  "2.25.0"
 
+ services: 
   frontendimg:
     build: /root/DevPractice/Fronend
-    container_name: frontend_container  
-    ports:
-      - "80:80"
-    depends_on:
-      - backendimg
+    container_name : frontend
+    ports: 
+       - 80:80
+    network_mode: bridge
+
+  backendimg:  
+    build: /root/DevPractice/backend
+    container_name: backend
+    ports: 
+       - 8080:8080
+    network_mode: bridge
+    depends_on :
+      - "frontendimg"
+
+
+      
