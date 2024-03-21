@@ -1,1 +1,8 @@
+version : '3.8'
+services  :
+frontimg  :
+ build  : .
+ container_name: backend
+ ports: 
+    -"8080:8080"
 
