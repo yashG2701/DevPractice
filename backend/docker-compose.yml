@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   backendimg:
-    build: ./backend  
+    build: .
     container_name: backend_container  
     ports:
       - "8080:8080"
